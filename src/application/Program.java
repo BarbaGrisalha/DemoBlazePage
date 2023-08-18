@@ -1,19 +1,15 @@
 package application;
 
 
-import jdk.jfr.Timespan;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Program {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
+        //Criação das variáveis utilizadas neste cenário.
         String url = "https://www.demoblaze.com/";
 
         driver.get(url);
@@ -21,7 +17,14 @@ public class Program {
         String user = "admin";
         String pass = "admin";
         String celular = "Iphone 6 32gb";
+        String pathMonitor = "//*[@id='next2']";
         String monitor = "ASUS Full HD";
+        String name = "Altamir Rodrigues";
+        String country = "Portugal";
+        String city = "Leiria";
+        String creditCard = "1234567891";
+        String month = "09";
+        String year = "23";
 
 
         //Emtrando com o utilizador e a password.
@@ -33,7 +36,6 @@ public class Program {
 
         userName.sendKeys(user);
         passWord.sendKeys(pass);
-
 
 
         //Acedendo a página após clicar no ok do Login
@@ -64,7 +66,7 @@ public class Program {
         WebElement addToCart = driver.findElement(By.className("btn-success"));
         addToCart.click();
 
-        //Entra no alert
+        //Agardar renderização para entrar no alert
 
         try {
             Thread.sleep(TimeUnit.SECONDS.toMillis(4));
@@ -84,6 +86,18 @@ public class Program {
         returnMain.click();
 
 
+        //Aguardando renderização para clicar
+        try {
+            Thread.sleep(TimeUnit.SECONDS.toMillis(4));
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        WebElement atributoMonitor = driver.findElement(By.xpath(pathMonitor));
+        atributoMonitor.click();
+
 
         //Aguardando renderização para clicar
         try {
@@ -93,14 +107,77 @@ public class Program {
             e.printStackTrace();
         }
 
-        /*
-        ######################## ATÉ AQUI FUNCIONA BEM ########################
-        */
+        WebElement chooseMonitor = driver.findElement(By.xpath("//a[text()='" + monitor + "']"));
+        chooseMonitor.click();
 
+        //Aguardando renderização para clicar
+        try {
+            Thread.sleep(TimeUnit.SECONDS.toMillis(4));
 
-
-
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+
+        addToCart = driver.findElement(By.className("btn-success"));
+        addToCart.click();
+
+        //Aguardando renderização para clicar
+        try {
+            Thread.sleep(TimeUnit.SECONDS.toMillis(4));
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        alert = driver.switchTo().alert();
+
+        System.out.println("Alert Text by Monitor: " + alertText);
+
+        alert.accept();
+        //Acesso ao Carrinho de compras
+        WebElement gotoCart = driver.findElement(By.xpath(" //*[@id='cartur']"));
+        gotoCart.click();
+
+        //Acesso ao local para inserir dados do cliente
+        WebElement placeOrder = driver.findElement(By.xpath("//*[@id='page-wrapper']//div[2]/button"));
+        placeOrder.click();
+
+
+        WebElement nameOrder = driver.findElement(By.xpath("//*[@id='name']"));
+        nameOrder.sendKeys(name);
+        WebElement countryOrder = driver.findElement(By.xpath("//*[@id='country']"));
+        countryOrder.sendKeys(country);
+        WebElement cityOrder = driver.findElement(By.xpath("//*[@id='city']"));
+        cityOrder.sendKeys(city);
+        WebElement creditCardOrder = driver.findElement(By.xpath("//*[@id='card']"));
+        creditCardOrder.sendKeys(creditCard);
+        WebElement monthOrder = driver.findElement(By.xpath("//*[@id='month']"));
+        monthOrder.sendKeys(month);
+        WebElement yearOrder = driver.findElement(By.xpath("//*[@id='year']"));
+        yearOrder.sendKeys(year);
+
+        WebElement buttonPurchase = driver.findElement(By.xpath("//*[@id='orderModal']//div[3]/button[2]"));
+
+
+        buttonPurchase.click();
+
+        //Aguardando renderizar
+        try {
+            Thread.sleep(TimeUnit.SECONDS.toMillis(4));
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        WebElement btnOk = driver.findElement(By.xpath("/html/body/div[10]/div[7]/div/button"));
+        btnOk.click();
+        driver.close();
+        driver.quit();
+
+
+    }
 
 
 }
