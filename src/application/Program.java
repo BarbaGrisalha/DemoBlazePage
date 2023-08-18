@@ -18,14 +18,11 @@ public class Program {
 
         driver.get(url);
         driver.manage().window().maximize();
+        String user = "admin";
+        String pass = "admin";
+        String celular = "Iphone 6 32gb";
+        String monitor = "ASUS Full HD";
 
-        //@Screenshot acedendo ao site
-        File src01 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        try {
-            FileUtils.copyFile(src01, new File("/Users/altamir/Documents/scr01.png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
         //Emtrando com o utilizador e a password.
         WebElement logi = driver.findElement(By.xpath("//*[@id='login2']"));
@@ -34,25 +31,15 @@ public class Program {
 
         WebElement passWord = driver.findElement(By.xpath("//*[@id='loginpassword']"));
 
-        userName.sendKeys("admin");
-        passWord.sendKeys("admin");
+        userName.sendKeys(user);
+        passWord.sendKeys(pass);
 
-        //@Screenshot Login e Pass
-        File src02 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        try {
-            FileUtils.copyFile(src02, new File("/Users/altamir/Documents/scr02.png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
 
         //Acedendo a página após clicar no ok do Login
 
         WebElement loginOK = driver.findElement(By.xpath("//*[@id='logInModal']//div[3]/button[2]"));
         loginOK.click();
-
-
-        //Criando variável com nome do produto celular
-        String celular = "Iphone 6 32gb";
 
         //Aguardando renderização para clicar
         try {
@@ -64,23 +51,56 @@ public class Program {
 
         WebElement telemovel = driver.findElement(By.xpath("//a[text()='" + celular + "']"));
         telemovel.click();
-         /*
-        ######################## ATÉ AQUI FUNCIONA BEM ########################
-         */
-        //*[@id='tbodyid']/div[2]/div/a
-
-        WebElement chooseTelemovel = driver.findElement(By.xpath("//*[@id='tbodyid']/div[2]/div/a"));
-        chooseTelemovel.click();
 
 
-        //@Screenshot selecção produto.
-        File src03 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        //Aguardando renderização para clicar
         try {
-            FileUtils.copyFile(src03, new File("/Users/altamir/Documents/scr03.png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            Thread.sleep(TimeUnit.SECONDS.toMillis(4));
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
-        driver.close();
-    }
+        WebElement addToCart = driver.findElement(By.className("btn-success"));
+        addToCart.click();
+
+        //Entra no alert
+
+        try {
+            Thread.sleep(TimeUnit.SECONDS.toMillis(4));
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Alert alert = driver.switchTo().alert();
+
+        String alertText = alert.getText();
+        System.out.println("Alert Text by Telemóvel: " + alertText);
+
+        alert.accept();
+
+        WebElement returnMain = driver.findElement(By.xpath(" //*[@id='navbarExample']//li[1]/a"));
+        returnMain.click();
+
+
+
+        //Aguardando renderização para clicar
+        try {
+            Thread.sleep(TimeUnit.SECONDS.toMillis(4));
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        /*
+        ######################## ATÉ AQUI FUNCIONA BEM ########################
+        */
+
+
+
+
+        }
+
+
 }
