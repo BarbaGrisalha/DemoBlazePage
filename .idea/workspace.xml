@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e0f917c-9aa6-4247-99b0-50253f24e9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/async_http_client_2_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demoblaze.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Telemovel.java" afterDir="false" />
+    <list default="true" id="0e0f917c-9aa6-4247-99b0-50253f24e9cd" name="Changes" comment="Primeira fase do Teste completo. Acessar web page correta, clicar em login, abrir pop-up de Admi e Pass, inserir e clicar em OK. Passed Test.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Telemovel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Telemovel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +63,14 @@
       <option name="presentableId" value="Default" />
       <updated>1692354135514</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primeira fase do Teste completo. Acessar web page correta, clicar em login, abrir pop-up de Admi e Pass, inserir e clicar em OK. Passed Test.">
+      <created>1692366293438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692366293438</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,5 +83,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primeira fase do Teste completo. Acessar web page correta, clicar em login, abrir pop-up de Admi e Pass, inserir e clicar em OK. Passed Test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Primeira fase do Teste completo. Acessar web page correta, clicar em login, abrir pop-up de Admi e Pass, inserir e clicar em OK. Passed Test." />
   </component>
 </project>
