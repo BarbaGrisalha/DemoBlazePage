@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e0f917c-9aa6-4247-99b0-50253f24e9cd" name="Changes" comment="Primeira fase do Teste completo. Acessar web page correta, clicar em login, abrir pop-up de Admi e Pass, inserir e clicar em OK. Passed Test.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Telemovel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Telemovel.java" afterDir="false" />
-    </list>
+    <list default="true" id="0e0f917c-9aa6-4247-99b0-50253f24e9cd" name="Changes" comment="Segunda Fase do Teste completo. Selecionar o aparelho celular desejado, inserido através de uma variável &quot;celular&quot;. Passed Test." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692366293438</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Segunda Fase do Teste completo. Selecionar o aparelho celular desejado, inserido através de uma variável &quot;celular&quot;. Passed Test.">
+      <created>1692373363643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692373363644</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +89,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeira fase do Teste completo. Acessar web page correta, clicar em login, abrir pop-up de Admi e Pass, inserir e clicar em OK. Passed Test." />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeira fase do Teste completo. Acessar web page correta, clicar em login, abrir pop-up de Admi e Pass, inserir e clicar em OK. Passed Test." />
+    <MESSAGE value="Segunda Fase do Teste completo. Selecionar o aparelho celular desejado, inserido através de uma variável &quot;celular&quot;. Passed Test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Segunda Fase do Teste completo. Selecionar o aparelho celular desejado, inserido através de uma variável &quot;celular&quot;. Passed Test." />
   </component>
 </project>
