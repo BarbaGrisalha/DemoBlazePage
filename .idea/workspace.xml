@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e0f917c-9aa6-4247-99b0-50253f24e9cd" name="Changes" comment="Terceira Fase do Teste completo. Adicionado o produto no carrinho , dado ok no alerta e voltado para a página principal.">
+    <list default="true" id="0e0f917c-9aa6-4247-99b0-50253f24e9cd" name="Changes" comment="Quarta Fase do Teste completo. Produtos no carrinho, dados do cliente alocados corretamente e compra efetuada. Passed test.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
     </list>
@@ -90,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692381413762</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Quarta Fase do Teste completo. Produtos no carrinho, dados do cliente alocados corretamente e compra efetuada. Passed test.">
+      <created>1692400199493</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692400199493</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +116,7 @@
     <MESSAGE value="Segunda Fase do Teste completo. Selecionar o aparelho celular desejado, inserido através de uma variável &quot;celular&quot;. Passed Test." />
     <MESSAGE value="Segunda Fase do Teste completo. Selecionar o aparelho celular desejado, inserido através de uma variável &quot;celular&quot;. Deletado um package desnecessário Passed Test." />
     <MESSAGE value="Terceira Fase do Teste completo. Adicionado o produto no carrinho , dado ok no alerta e voltado para a página principal." />
-    <option name="LAST_COMMIT_MESSAGE" value="Terceira Fase do Teste completo. Adicionado o produto no carrinho , dado ok no alerta e voltado para a página principal." />
+    <MESSAGE value="Quarta Fase do Teste completo. Produtos no carrinho, dados do cliente alocados corretamente e compra efetuada. Passed test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Quarta Fase do Teste completo. Produtos no carrinho, dados do cliente alocados corretamente e compra efetuada. Passed test." />
   </component>
 </project>

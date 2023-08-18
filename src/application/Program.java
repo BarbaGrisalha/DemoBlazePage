@@ -1,9 +1,6 @@
 package application;
-
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.concurrent.TimeUnit;
 
 public class Program {
@@ -11,9 +8,6 @@ public class Program {
         WebDriver driver = new ChromeDriver();
         //Criação das variáveis utilizadas neste cenário.
         String url = "https://www.demoblaze.com/";
-
-        driver.get(url);
-        driver.manage().window().maximize();
         String user = "admin";
         String pass = "admin";
         String celular = "Iphone 6 32gb";
@@ -26,17 +20,17 @@ public class Program {
         String month = "09";
         String year = "23";
 
+        //Abrindo a página a página
+        driver.get(url);
+        driver.manage().window().maximize();
 
         //Emtrando com o utilizador e a password.
         WebElement logi = driver.findElement(By.xpath("//*[@id='login2']"));
         logi.click();
         WebElement userName = driver.findElement(By.xpath("//*[@id='loginusername']"));
-
         WebElement passWord = driver.findElement(By.xpath("//*[@id='loginpassword']"));
-
         userName.sendKeys(user);
         passWord.sendKeys(pass);
-
 
         //Acedendo a página após clicar no ok do Login
 
@@ -51,9 +45,9 @@ public class Program {
             e.printStackTrace();
         }
 
+        //Buscando Telemóvel
         WebElement telemovel = driver.findElement(By.xpath("//a[text()='" + celular + "']"));
         telemovel.click();
-
 
         //Aguardando renderização para clicar
         try {
@@ -63,11 +57,11 @@ public class Program {
             e.printStackTrace();
         }
 
+        //Adicionando telemóvel ao carrinho
         WebElement addToCart = driver.findElement(By.className("btn-success"));
         addToCart.click();
 
         //Agardar renderização para entrar no alert
-
         try {
             Thread.sleep(TimeUnit.SECONDS.toMillis(4));
 
@@ -75,17 +69,17 @@ public class Program {
             e.printStackTrace();
         }
 
+        //Acessando o alerta
         Alert alert = driver.switchTo().alert();
-
         String alertText = alert.getText();
         System.out.println("Alert Text by Telemóvel: " + alertText);
 
         alert.accept();
 
+        //Voltando a página principal
         WebElement returnMain = driver.findElement(By.xpath(" //*[@id='navbarExample']//li[1]/a"));
         returnMain.click();
 
-
         //Aguardando renderização para clicar
         try {
             Thread.sleep(TimeUnit.SECONDS.toMillis(4));
@@ -94,11 +88,10 @@ public class Program {
             e.printStackTrace();
         }
 
-
+        //Buscando o monitor
         WebElement atributoMonitor = driver.findElement(By.xpath(pathMonitor));
         atributoMonitor.click();
 
-
         //Aguardando renderização para clicar
         try {
             Thread.sleep(TimeUnit.SECONDS.toMillis(4));
@@ -107,6 +100,7 @@ public class Program {
             e.printStackTrace();
         }
 
+        //Adicionando o monitor no Carrinho de compras
         WebElement chooseMonitor = driver.findElement(By.xpath("//a[text()='" + monitor + "']"));
         chooseMonitor.click();
 
@@ -129,12 +123,12 @@ public class Program {
             e.printStackTrace();
         }
 
-
+        //Acessando o alert
         alert = driver.switchTo().alert();
-
         System.out.println("Alert Text by Monitor: " + alertText);
 
         alert.accept();
+
         //Acesso ao Carrinho de compras
         WebElement gotoCart = driver.findElement(By.xpath(" //*[@id='cartur']"));
         gotoCart.click();
@@ -143,7 +137,7 @@ public class Program {
         WebElement placeOrder = driver.findElement(By.xpath("//*[@id='page-wrapper']//div[2]/button"));
         placeOrder.click();
 
-
+        //Introduzindo os dados do cliente na ficha de compra
         WebElement nameOrder = driver.findElement(By.xpath("//*[@id='name']"));
         nameOrder.sendKeys(name);
         WebElement countryOrder = driver.findElement(By.xpath("//*[@id='country']"));
@@ -156,9 +150,7 @@ public class Program {
         monthOrder.sendKeys(month);
         WebElement yearOrder = driver.findElement(By.xpath("//*[@id='year']"));
         yearOrder.sendKeys(year);
-
         WebElement buttonPurchase = driver.findElement(By.xpath("//*[@id='orderModal']//div[3]/button[2]"));
-
 
         buttonPurchase.click();
 
@@ -170,14 +162,10 @@ public class Program {
             e.printStackTrace();
         }
 
-
+        //Ok Final
         WebElement btnOk = driver.findElement(By.xpath("/html/body/div[10]/div[7]/div/button"));
         btnOk.click();
         driver.close();
         driver.quit();
-
-
     }
-
-
 }
